@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/emergency_map/static/css/main.21d75888.css",
+    "main.js": "/emergency_map/static/js/main.de18d537.js",
+    "index.html": "/emergency_map/index.html",
+    "main.21d75888.css.map": "/emergency_map/static/css/main.21d75888.css.map",
+    "main.de18d537.js.map": "/emergency_map/static/js/main.de18d537.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21d75888.css",
+    "static/js/main.de18d537.js"
+  ]
+}
