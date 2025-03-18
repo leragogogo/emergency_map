@@ -46,7 +46,7 @@ const MapComponent = ({ showGraph, selectedAlgorithm }) => {
 
     useEffect(() => {
         // fetch data from JSON file
-        fetch("/data/heidelberg_graph.json")
+        fetch(`${process.env.PUBLIC_URL}/heidelberg_graph.json`)
             .then(response => {
                 return response.json();
             })
