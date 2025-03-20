@@ -9,6 +9,7 @@ import { useMapEvent } from "react-leaflet";
 import { aStar } from "../utils/algorithms/astar";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import markerShadowPng from "leaflet/dist/images/marker-shadow.png";
+import { runBenchmark } from "../test/benchmark";
 
 const ClickHandler = ({ onClick }) => {
     useMapEvent("click", onClick);
@@ -44,6 +45,7 @@ const MapComponent = ({ showGraph, selectedAlgorithm }) => {
     const [totalTime, setTotalTime] = useState(null);
     const [midpoint, setMidpoint] = useState(null);
 
+    // comment when measure perfomance
     useEffect(() => {
         // fetch data from JSON file
         fetch(`${process.env.PUBLIC_URL}/heidelberg_graph.json`)
@@ -54,7 +56,27 @@ const MapComponent = ({ showGraph, selectedAlgorithm }) => {
                 setGraph(data);
                 setLoading(false);
             })
+
     }, []);
+
+    // use this useEffect when want to measure perfomance
+    /*useEffect(() => {
+        if (graph) {
+            runBenchmark(graph.edges, graph.nodes);
+        }
+        else {
+            // fetch data from JSON file
+            fetch(`${process.env.PUBLIC_URL}/heidelberg_graph.json`)
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    setGraph(data);
+                    setLoading(false);
+                })
+        }
+    }, [graph]);*/
+
 
     if (loading) {
         return (
