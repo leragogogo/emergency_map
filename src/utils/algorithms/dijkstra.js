@@ -26,7 +26,7 @@ export function dijkstra(graph, startNode, nodes) {
         if (!currentNode || distances[currentNode] === Infinity) break;
 
         // update neighbors
-        for (let neighbor of graph[currentNode]) {
+        for (let neighbor of graph[currentNode] || []) {
             let newDist = distances[currentNode] + neighbor.weight;
 
             if (newDist < distances[neighbor.to]) {

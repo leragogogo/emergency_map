@@ -2,7 +2,7 @@ import MapComponent from './components/MapComponent';
 import React, { useState } from "react";
 
 function App() {
-  const [showGraph, setShowGraph] = useState(true);
+  const [showGraph, setShowGraph] = useState(false);
   const [selectedAlgorithm, setSelectedAlgorithm] = useState('dijkstra');
 
   const handleAlgorithmChange = (event) => {

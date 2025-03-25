@@ -160,13 +160,6 @@ const MapComponent = ({ showGraph, selectedAlgorithm }) => {
 
             {showGraph && graph && (
                 <>
-                    {/* Intersections */}
-                    {Object.entries(graph.nodes)
-                        .filter(([_, node]) => node.type === "intersection")
-                        .map(([id, node]) => (
-                            <Marker key={id} position={node.coordinates} icon={intersectionIcon} />
-                        ))}
-
                     {/* Roads (Edges) */}
                     {Object.entries(graph.edges).flatMap(([fromId, connections]) =>
                         connections.map((edge, index) => {
