@@ -1,6 +1,6 @@
 # Emergency map of Heidelberg
 
-The map that finds the shortest path from user's click to a hospital using either Dijkstra or A* algorithms, can be found at https://leragogogo.github.io/emergency_map/
+The map that finds the shortest path from the user's click to a hospital using either Dijkstra or A* algorithms can be found at: https://leragogogo.github.io/emergency_map/
 
 ## Setup Guide
 Follow the next steps to run this app locally: 
